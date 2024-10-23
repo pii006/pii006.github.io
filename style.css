@@ -1,0 +1,149 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background with Gradient */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff4e50, #ff6f69, #ff9a9e);
+    z-index: -2;
+    filter: blur(4px);
+}
+
+/* Confetti Animation */
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/03/31/19/55/confetti-1298847_1280.png') repeat;
+    opacity: 0.6;
+    animation: fall 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes fall {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100%;
+    }
+}
+
+/* Balloons */
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 120px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.red { left: 15%; background: #ff6f69; }
+.yellow { left: 40%; background: #f8b400; }
+.blue { left: 65%; background: #6ec1e4; }
+.pink { left: 85%; background: #ffc0cb; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-150px); }
+    100% { transform: translateY(0); }
+}
+
+/* Invitation Container */
+.container {
+    position: relative;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header */
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8rem;
+    color: #ff4e50;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #ffc1c1;
+}
+
+.header .tagline {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Birthday Cake Image */
+.birthday-cake {
+    width: 200px;
+    margin: 20px auto;
+}
+
+/* Content */
+.content .subtitle {
+    font-size: 2rem;
+    color: #c06c84;
+    margin-bottom: 10px;
+}
+
+.content .description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.event-details p {
+    font-size: 1rem;
+    color: #ff4e50;
+    margin: 5px 0;
+}
+
+/* Wish Section */
+.wish-section .title {
+    font-size: 1.8rem;
+    color: #ff6f69;
+    margin: 20px 0;
+}
+
+.custom-text {
+    width: 80%;
+    max-width: 500px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ff4e50;
+    outline: none;
+    resize: none;
+    transition: transform 0.2s;
+}
+
+.custom-text:focus {
+    transform: scale(1.05);
+    border-color: #ff9a9e;
+}
+.subtitles {
+    font-family: 'Times New Roman', serif;
+    font-size: 100%;
+    color: #e63946; /* Warna merah lembut */
+    margin-bottom: 15px;
+}
